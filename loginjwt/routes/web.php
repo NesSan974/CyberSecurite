@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/logged', function () {
-    return view('logged');
+Route::get('/inscription', function () {
+    return view('inscription');
 });

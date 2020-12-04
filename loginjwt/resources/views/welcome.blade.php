@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,6 +19,8 @@
   </style>
 </head>
 
+<h1>connexion</h1>
+
 <body class="antialiased">
   <form method="POST" action="/api/login">
     <div class="form-group">
@@ -27,20 +28,26 @@
       <input type="email" name="email" class="form-control" aria-describedby="emailHelp">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" name="password" class="form-control" id="password">
     </div>
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <!-- <input name="count" type="hidden" value="<?php //echo $_SESSION['count'] ?>"> -->
+    <!-- <input name="count" type="hidden" value="<?php //echo $_SESSION['count'] 
+                                                  ?>"> -->
     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
   </form>
 
+  <a href="/inscription" role="button" class="btn btn-success">S'enregistrer</a>
 
 
+
+  
 </body>
 
 </html>
+
