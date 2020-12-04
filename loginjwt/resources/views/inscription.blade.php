@@ -44,6 +44,9 @@
     </form>
   </div>
 
+  <a href="/welcome" role="button" class="btn btn-success">Se connecter</a>
+
+
 
 
 
