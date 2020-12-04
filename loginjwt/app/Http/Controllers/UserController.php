@@ -60,11 +60,16 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
+            'password' => 'required_with:password_confirmed|string|min:6',
+            'confirm_password' => 'required|string|min:6|',
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors()->toJson(), 400);
+        }
+
+        if ($request->get('password') != $request->get('confirm_password')){
+            return ["error" => "Le mot de passe n'est pas identique"];
         }
 
         $user = User::create([
